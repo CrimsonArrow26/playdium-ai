@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="en" class="tw-dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Playdium - AI Game Maker </title>
+        <meta name="description" content="Make games with AI, no coding required" />
+        <link
+            rel="shortcut icon"
+            href="./assets/logo/logo.png"
+            type="image/x-icon"
+        />
+
+        <meta property="og:title" content="All your AI models in one place - Try Pixa Playground" />
+        <meta property="og:description" content="Get all your AI models and tools in one place" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://github.com/PaulleDemon" />
+        <meta property="og:image" content="" />
+
+        <link rel="stylesheet" href="css/tailwind-build.css">
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-');
+        </script>
+
+    </head>
+    <body
+        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] 
+            tw-text-black dark:tw-bg-black  dark:tw-text-white"
+    >
+       
+
+        <header
+            class="lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-4 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full 
+                    tw-text-gray-700 tw-bg-white dark:tw-text-gray-200 dark:tw-bg-[#17181b] tw-px-[3%] tw-rounded-md lg:tw-max-w-5xl tw-shadow-md dark:tw-shadow-gray-700
+                    lg:tw-justify-around lg:!tw-backdrop-blur-lg lg:tw-opacity-[0.99]"
+        >
+            <a class="tw-flex tw-p-[4px] tw-gap-2 tw-place-items-center" href="#">
+               
+
+                <div class="tw-h-[30px] tw-max-w-[100px]">
+                    <img
+                        src="./assets/logo/logo.png"
+                        alt="logo"
+                        class="tw-object-contain tw-h-full tw-w-full dark:tw-invert"
+                    />
+                </div>
+                <span class="tw-uppercase tw-text-base tw-font-medium">Playdium</span>
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <nav
+                    class="tw-relative tw-flex tw-h-full max-lg:tw-h-max tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col 
+                                max-lg:tw-gap-5 lg:tw-mx-auto tw-place-items-center"
+                >
+                    
+                    <a class="header-links navbar-tab-solutions" href="#"> Solutions </a>
+                   
+                    <div class="tw-relative tw-flex tw-flex-col tw-place-items-center navbar-tab-features">
+                        <div id="nav-dropdown-toggle-0" class="max-lg:tw-max-w-fit tw-flex header-links tw-gap-1  tw-place-items-center">
+                            <span class=""> Features </span>
+                            <i class="tw-text-sm bi bi-chevron-down"></i>
+                        </div>
+                        <nav id="nav-dropdown-list-0" 
+                            data-open="false"
+                            class="tw-scale-0 tw-opacity-0  lg:tw-fixed tw-flex lg:tw-top-[80px] lg:tw-left-1/2 lg:tw--translate-x-1/2 
+                                    tw-w-[90%] tw-rounded-lg max-lg:tw-h-0 max-lg:tw-w-0
+                                    lg:tw-h-[450px] tw-overflow-hidden
+                                     tw-bg-white dark:tw-bg-[#17181B] tw-duration-300 
+                                     tw-transition-opacity tw-transition-height tw-shadow-lg tw-p-4">
+                            <div class="tw-grid max-xl:tw-flex max-xl:tw-flex-col tw-justify-around tw-grid-cols-2 tw-w-full">
+                                <a class="header-links tw-flex tw-text-left tw-gap-4 !tw-p-4" href="#">
+                                    <div class="tw-font-semibold tw-text-3xl">
+                                        <i class="bi bi-list-columns-reverse"></i>
+                                    </div>
+                                    <div class="tw-flex tw-flex-col tw-gap-2">
+                                        <div class="tw-text-lg tw-text-black dark:tw-text-white tw-font-medium">Prompt to Games</div>
+                                        <p>Prompts to playable games, instantly</p>
+                                    </div> 
+                                </a>
+
+                                <a class="header-links tw-flex tw-text-left tw-gap-4 !tw-p-4" href="#">
+                                    <div class="tw-font-semibold tw-text-3xl">
+                                        <i class="bi bi-grid-1x2-fill"></i>
+                                    </div>
+                                    <div class="tw-flex tw-flex-col tw-gap-2">
+                                        <div class="tw-text-lg tw-text-black dark:tw-text-white tw-font-medium">Customization  </div>
+                                        <p class="">Personalize everything, create your way</p>
+                                    </div> 
+                                </a>
+
+                                <a class="header-links tw-flex tw-text-left tw-gap-4 !tw-p-4" href="#">
+                                    <div class="tw-font-semibold tw-text-3xl">
+                                        <i class="bi bi-globe"></i>
+                                    </div>
+                                    <div class="tw-flex tw-flex-col tw-gap-2">
+                                        <div class="tw-text-lg tw-text-black dark:tw-text-white tw-font-medium"> Collaboration</div>
+                                        <p class="">Create games together, from anywhere</p>
+                                    </div> 
+                                </a>
+
+                                <a class="header-links tw-flex tw-text-left tw-gap-4 !tw-p-4" href="#">
+                                    <div class="tw-font-semibold tw-text-3xl">
+                                        <i class="bi bi-image-fill"></i>
+                                    </div>
+                                    <div class="tw-flex tw-flex-col tw-gap-2">
+                                        <div class="tw-text-lg tw-text-black dark:tw-text-white tw-font-medium">
+                                            Simple deployment
+                                        </div>
+                                        <p class="">Instant launch across all devices</p>
+                                    </div> 
+                                </a>
+
+                                <a class="header-links tw-flex tw-text-left tw-gap-4 !tw-p-4" href="#">
+                                    <div class="tw-font-semibold tw-text-3xl">
+                                        <i class="bi bi-calendar-range"></i>
+                                    </div>
+                                    <div class="tw-flex tw-flex-col tw-gap-2">
+                                        <div class="tw-text-lg tw-text-black dark:tw-text-white tw-font-medium">
+                                            Import content
+                                        </div>
+                                        <p class="">Assets transformed into instant gameplay</p>
+                                    </div> 
+                                </a>
+
+                                <a class="header-links tw-flex tw-text-left tw-gap-4 !tw-p-4" href="#">
+                                    <div class="tw-font-semibold tw-text-3xl">
+                                        <i class="bi bi-translate"></i>
+                                    </div>
+                                    <div class="tw-flex tw-flex-col tw-gap-2">
+                                        <div class="tw-text-lg tw-text-black dark:tw-text-white tw-font-medium">
+                                            Multilingual support
+                                        </div>
+                                        <p class="">Create games in 100+ languages</p>
+                                    </div> 
+                                </a>
+                            </div>           
+                        </nav>
+                    </div>
+                    <a class="header-links navbar-tab-pricing" href="#pricing"> Pricing </a>
+                    
+                </nav>
+                <div
+                    class="lg:tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full 
+                            max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                    <button type="button" onclick="toggleMode()" class="header-links tw-text-gray-600 dark:tw-text-gray-300" title="toggle-theme" 
+                            id="theme-toggle"> 
+                        <i class="bi bi-sun" id="toggle-mode-icon"></i>
+                    </button>
+                    <a
+                        href="#join"
+                        aria-label="Try Playdium"
+                        class="btn tw-flex tw-gap-3 tw-px-3 tw-py-2 tw-transition-transform 
+                                    tw-duration-[0.3s] hover:tw-translate-x-2"
+                    >
+                        <span>Join Us</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-gray-500 lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
+
+        <section
+            class="hero-section tw-relative tw-mt-20 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-mt-[100px]"
+            id="hero-section"
+        >
+
+            <div class="tw-fixed tw-bg-[#000000af] dark:tw-bg-[#80808085] tw-top-0 tw-left-1/2 tw--translate-x-1/2 tw-z-20 tw-transition-opacity
+                tw-duration-300 tw-scale-0 tw-opacity-0 tw-p-2
+                tw-w-full tw-h-full tw-flex tw-place-content-center tw-place-items-center" id="video-container-bg">
+
+                <div class="tw-max-w-[80vw] max-lg:tw-max-w-full max-lg:tw-w-full tw-scale-0 tw-transition-transform tw-duration-500 tw-p-6 tw-rounded-xl  max-lg:tw-px-2 tw-w-full tw-gap-2 tw-shadow-md 
+                            tw-h-[90vh] max-lg:tw-h-auto max-lg:tw-min-h-[400px] tw-bg-white dark:tw-bg-[#16171A] tw-max-h-full
+                            " id="video-container">
+                    <div class="tw-w-full tw-flex">
+                        <button type="button" onclick="closeVideo()" class="tw-ml-auto tw-text-xl" title="close">
+                            <i class="bi bi-x-circle-fill"></i>
+                        </button>
+                    </div>
+                    <div class="tw-flex tw-w-full  tw-rounded-xl tw-px-[5%] max-md:tw-px-2 tw-min-h-[300px] tw-max-h-[90%] tw-h-full">
+
+                        <div class="tw-relative tw-bg-black tw-min-w-full tw-min-h-full tw-overflow-clip tw-rounded-md">
+                            <video 
+                                src="assets/video.mp4" 
+                                autoplay 
+                                muted 
+                                loop 
+                                playsinline
+                                preload="auto"
+                                class="tw-w-full tw-h-full tw-rounded-xl tw-object-cover"
+                                style="object-fit: cover;"
+                            >
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+        
+                    </div>
+                </div>  
+            </div>
+
+            <div    
+                class="hero-bg-gradient tw-relative tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4"
+            >
+
+                <div class="purple-bg-grad  reveal-up tw-absolute tw-left-1/2 tw--translate-1/2 tw-top-[10%] tw-h-[120px] tw-w-[120px]"
+                ></div> 
+
+                <div
+                    class="tw-flex tw-flex-col tw-min-h-[60vh] tw-place-content-center tw-items-center"
+                >
+                    <div id="hero-tagline"></div>
+                    <div
+                        class="reveal-up tw-mt-8 tw-max-w-[450px] tw-text-lg max-lg:tw-text-base tw-p-2 tw-text-center
+                         tw-text-gray-800 dark:tw-text-white max-lg:tw-max-w-full"
+                    >
+                        Discover a platform where artificial intelligence turns your concepts into fully functional games, making development simple, fast, and fun..
+                    </div>
+
+                    <div
+                        class="reveal-up tw-mt-10 max-md:tw-flex-col tw-flex tw-place-items-center tw-gap-4"
+                    >
+
+                        <button onclick="openVideo()"
+                            class="btn !tw-w-[170px] max-lg:!tw-w-[160px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 tw-group !tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors 
+                                        tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white"
+                        >
+                            
+                            <div class="tw-relative tw-flex tw-place-items-center tw-place-content-center tw-w-6 tw-h-6">
+                                <div class="tw-absolute tw-inset-0 tw-top-0 tw-left-0 tw-scale-0 tw-duration-300 group-hover:tw-scale-100 tw-border-2
+                                             tw-border-gray-600 dark:tw-border-gray-200 tw-rounded-full tw-w-full tw-h-full"></div>
+                                <span class="bi bi-play-circle-fill"></span>
+                            </div>
+                            <span>Watch video</span>
+                        </button>
+
+                        <a
+                            class="btn tw-group max-lg:!tw-w-[160px] tw-flex tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                            href="#join"
+                        >
+                            <span>Join Us</span>
+                            <i class="bi bi-arrow-right group-hover:tw-translate-x-1 tw-duration-300"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                <div
+                    class="reveal-up  tw-relative tw-mt-8 tw-flex tw-w-full tw-place-content-center tw-place-items-center"
+                    id="dashboard-container"
+                >
+                    <div class="purple-bg-grad  reveal-up tw-absolute tw-left-1/2 tw--translate-x-1/2 tw-top-[5%] tw-h-[200px] tw-w-[200px]"
+                    ></div>    
+
+                    <div
+                        class="tw-relative tw-max-w-[80%] tw-bg-white dark:tw-bg-black tw-border-[1px] dark:tw-border-[#36393c] lg:tw-w-[1024px]
+                                lg:tw-h-[650px] tw-flex tw-shadow-xl max-lg:tw-h-[450px] max-lg:tw-w-full tw-overflow-hidden
+                                tw-min-w-[320px] md:tw-w-full tw-min-h-[450px] tw-rounded-xl tw-bg-transparent max-md:tw-max-w-full"
+                        id="dashboard"
+                        style="translate: none; rotate: none; scale: none; transform: perspective(1201.71px);"
+                    >  
+
+                        <div class="tw-max-w-[80%] reveal-up tw-absolute tw-left-1/2 tw--translate-x-1/2 tw-top-[0%] lg:tw-max-w-[1000px] tw-h-full tw-w-full"
+                        style="translate: none; rotate: none; scale: none; transform: translate(-50%, 0%) translate(0px, 0px); opacity: 1;"></div> 
+                        
+
+                            
+
+                                <video 
+                                    src="assets/video.mp4" 
+                                    autoplay 
+                                    muted 
+                                    loop 
+                                    class="tw-w-full tw-h-full tw-rounded-xl"
+                                    data-dm-button-id="download-master-button-167717"
+                                >
+                                    Your browser does not support the video tag.
+                                </video>
+
+                </div>
+            </div>
+        </section>
+
+
+            
+        <section id="features"
+        class="tw-relative tw-flex  tw-w-full tw-min-h-[110vh] max-md:tw-min-h-[80vh] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden"
+    >   
+         <div class="tw-w-full max-lg:tw-max-w-full tw-place-content-center tw-items-center 
+                    tw-flex tw-flex-col tw-max-w-[80%] tw-gap-4 tw-p-4">
+           
+            <h3 class="tw-text-5xl tw-font-semibold tw-text-black dark:tw-text-white tw-mb-4 max-md:tw-text-3xl tw-leading-normal tw-text-center">
+                Playdium Features
+            </h3>
+            
+            <div class="tw-mt-8 tw-relative tw-gap-10 tw-p-4 tw-grid tw-place-items-center tw-grid-cols-3 max-lg:tw-flex max-lg:tw-flex-col">
+
+
+                <div class="reveal-up  tw-w-[350px] tw-border-[1px] tw-h-[400px] tw-rounded-md tw-place-items-center tw-p-4
+                             tw-bg-[#f2f3f4] max-md:tw-w-[320px] dark:tw-bg-[#141414] dark:tw-border-[#1f2123] tw-flex tw-flex-col tw-gap-3">
+
+                    <div class="tw-w-full tw-h-[250px]
+                                tw-p-4
+                                tw-rounded-xl 
+                                 tw-backdrop-blur-2xl
+                                 tw-overflow-hidden tw-flex tw-place-content-center">
+                                 <dotlottie-wc
+                                 src="https://lottie.host/c1a4b958-a3ee-4000-b35c-07bf41d51c97/AZZ6sw0DIr.lottie"
+                                 style="width: full;height: full"
+                                 autoplay
+                                 loop
+                               ></dotlottie-wc>
+                    </div>
+                    <h3 class="tw-text-2xl">
+                        Prompt to Games
+                    </h3>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-px-4 tw-text-center tw-text-sm">
+                        Turn simple prompts into playable games instantly, skip the code and bring your ideas to life with our AI-powered templates.
+                    </p>
+                </div>
+                
+                <div class="reveal-up tw-w-[350px] max-md:tw-w-[320px] tw-border-[1px] tw-h-[400px] tw-rounded-md tw-place-items-center tw-p-4
+                             tw-bg-[#f2f3f4] dark:tw-bg-[#141414] dark:tw-border-[#1f2123] tw-flex tw-flex-col tw-gap-3">
+
+                    <div class="tw-w-full tw-h-[250px]
+                                tw-p-4
+                                tw-rounded-xl 
+                                 tw-backdrop-blur-2xl
+                                 tw-overflow-hidden tw-flex tw-place-content-center">
+                                 <dotlottie-wc
+                                 src="https://lottie.host/90a4e283-8b6f-4b0d-b071-31d82fb6ea9b/nOsspOLQIZ.lottie"
+                                 style="width: full;height: full"
+                                 autoplay
+                                 loop
+                               ></dotlottie-wc>
+                    </div>
+                    <h3 class="tw-text-2xl">
+                        Customization 
+                    </h3>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-px-4 tw-text-center tw-text-sm">
+                        Personalize every detail, Playdium adapts to your game style, theme, and experience level to give you an never before experience for a truly unique build.
+                    </p>
+                </div>
+
+                <div class="reveal-up tw-w-[350px] max-md:tw-w-[320px] tw-border-[1px] tw-h-[400px] tw-rounded-lg tw-place-items-center tw-p-4
+                             tw-bg-[#f2f3f4] dark:tw-bg-[#141414] dark:tw-border-[#1f2123] tw-flex tw-flex-col tw-gap-3">
+
+                    <div class="tw-w-full tw-h-[250px]
+                                tw-p-4
+                                tw-rounded-xl 
+                                 tw-backdrop-blur-2xl
+                                 tw-overflow-hidden tw-flex tw-place-content-center">
+                                 <dotlottie-wc
+                                 src="https://lottie.host/f1ef0d33-68f9-4914-a6ec-daa3b3471185/LyBhytZOaT.lottie"
+                                 style="width: full;height: full"
+                                 autoplay
+                                 loop
+                               ></dotlottie-wc>
+                    </div>
+                    <h3 class="tw-text-2xl">
+                        Collaboration
+                    </h3>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-px-4 tw-text-center tw-text-sm">
+                        Build with friends, teams, or the world, real-time multiplayer and co-creation lets inspiration flow from anywhere and anyone.
+                    </p>
+                </div>
+
+                <div class="reveal-up tw-w-[350px] max-md:tw-w-[320px] tw-border-[1px] tw-h-[400px] tw-rounded-lg tw-place-items-center tw-p-4
+                             tw-bg-[#f2f3f4] dark:tw-bg-[#141414] dark:tw-border-[#1f2123] tw-flex tw-flex-col tw-gap-3">
+
+                    <div class="tw-w-full tw-h-[250px]
+                                tw-p-4
+                                 tw-rounded-xl 
+                                 tw-backdrop-blur-2xl
+                                 tw-overflow-hidden tw-flex tw-place-content-center">
+                                 <dotlottie-wc
+                                 src="https://lottie.host/56cdbe94-c7cd-40a3-a282-4f2a6fe498fb/2ZYOgM72VA.lottie"
+                                 style="width: full;height: full"
+                                 autoplay
+                                 loop
+                               ></dotlottie-wc>
+                    </div>
+                    <h3 class="tw-text-2xl">
+                        Simple deployment
+                    </h3>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-px-4 tw-text-center tw-text-sm">
+                        Launch your game instantly across devices, no coding, no waiting, just pure creativity unleashed.
+                    </p>
+                </div>
+
+                <div class="reveal-up tw-w-[350px] max-md:tw-w-[320px] tw-border-[1px] tw-h-[400px] tw-rounded-lg tw-place-items-center tw-p-4
+                             tw-bg-[#f2f3f4] dark:tw-bg-[#141414] dark:tw-border-[#1f2123] tw-flex tw-flex-col tw-gap-3">
+
+                    <div class="tw-w-full tw-h-[250px]
+                                tw-p-4
+                                tw-rounded-xl 
+                                 tw-backdrop-blur-2xl
+                                 tw-overflow-hidden tw-flex tw-place-content-center">
+                                 <dotlottie-wc
+  src="https://lottie.host/335fa2ca-fa40-4a0b-bf23-030e22228725/PYpCH6acm2.lottie"
+  style="width: full;height: full"
+  autoplay
+  loop
+></dotlottie-wc>
+                    </div>
+                    <h3 class="tw-text-2xl">
+                        Import content
+                    </h3>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-px-4 tw-text-center tw-text-sm">
+                        Transform your ideas by importing characters, maps, and watch your assets become playable elements in minutes.
+                    </p>
+                </div>
+
+                <div class="reveal-up tw-w-[350px] max-md:tw-w-[320px] tw-border-[1px] tw-h-[400px] tw-rounded-lg tw-place-items-center tw-p-4
+                             tw-bg-[#f2f3f4] dark:tw-bg-[#141414] dark:tw-border-[#1f2123] tw-flex tw-flex-col tw-gap-3">
+
+                    <div class="tw-w-full tw-h-[250px]
+                                tw-p-4
+                                tw-rounded-xl 
+                                 tw-backdrop-blur-2xl
+                                 tw-overflow-hidden tw-flex tw-place-content-center">
+                                 <dotlottie-wc
+                                 src="https://lottie.host/98a61a6d-fe3e-4e7d-965b-1b46aa1ce810/ZJbnFnCEr6.lottie"
+                                 style="width: full;height: full"
+                                 autoplay
+                                 loop
+                               ></dotlottie-wc>
+                    </div>
+                    <h3 class="tw-text-2xl">
+                        Multilingual support
+                    </h3>
+                    <p class="tw-text-gray-700 dark:tw-text-gray-300 tw-px-4 tw-text-center tw-text-sm">
+                        Create and play in over 100 languages, our AI makes games accessible worldwide, breaking all communication barriers.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+ 
+
+        
+
+
+        
+       
+
+        
+
+        <section
+            class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-gap-6 tw-place-items-center tw-p-[2%]"
+            id="pricing"
+        >
+            <h3
+                class="tw-text-5xl tw-font-semibold tw-text-black dark:tw-text-white tw-mb-4 max-md:tw-text-3xl tw-leading-normal tw-text-center"
+            >
+                Choose the right plan for you
+            </h3>
+            <div
+                class="tw-mt-10 tw-flex tw-flex-wrap tw-place-content-center tw-gap-8 max-lg:tw-flex-col"
+            >
+                <div
+                    class="reveal-up tw-flex tw-w-[350px] tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-border-[1px]
+                            tw-border-outlineColor tw-bg-white dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-8 tw-shadow-xl max-lg:tw-w-[320px]"
+                >
+                    <h3 class="">
+                        <span class="tw-text-5xl max-md:tw-text-3xl tw-font-semibold">$0</span>
+                        <span class="tw-text-2xl tw-text-gray-600 dark:tw-text-gray-300">/mo</span>
+                    </h3>
+                    <p class="tw-mt-3 tw-text-center tw-text-gray-800 dark:tw-text-gray-100">
+                       For a free trial <span style="color: grey;">(no credit card needed)</span>
+                    </p>
+                    <hr />
+                    <ul
+                        class="tw-mt-4 tw-flex tw-flex-col tw-gap-4 tw-text-base tw-text-gray-800 dark:tw-text-gray-200"
+                    >
+                        <li class="tw-flex tw-gap-2">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>1 Game / Lifetime</span>    
+                        </li>
+                        <li class="tw-flex tw-gap-2">
+                            <i class="bi bi-check-circle-fill tw-text-gray-400 dark:tw-text-gray-500"></i>
+                            <span>Customization</span>    
+                        </li>
+                        <li class="tw-flex tw-gap-2">
+                            <i class="bi bi-check-circle-fill tw-text-gray-400 dark:tw-text-gray-500"></i>
+                            <span>Ready to Publish</span>    
+                        </li>
+
+                        <li class="tw-flex tw-gap-2 ">
+                            <i class="bi bi-check-circle-fill tw-text-gray-400 dark:tw-text-gray-500"></i>
+                            <span>Team Collaboration</span>    
+                        </li>
+
+                        <li class="tw-flex tw-gap-2 ">
+                            <i class="bi bi-check-circle-fill tw-text-gray-400 dark:tw-text-gray-500"></i>
+                            <span>Import Content</span>    
+                        </li>
+                  
+                    </ul>
+                    <a
+                        href="#"
+                        class="btn tw-mt-auto !tw-w-full tw-transition-transform tw-duration-[0.3s] 
+                                hover:tw-scale-x-[1.02] !tw-text-black !tw-bg-transparent !tw-border-[1px]
+                                 tw-border-black dark:tw-border-white dark:!tw-text-white"
+                    >
+                        Choose plan
+                    </a>
+                    
+                </div>
+                
+                <div
+                class="reveal-up tw-flex tw-w-[350px] tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-border-[1px]
+                        tw-border-outlineColor tw-bg-white dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-p-8 tw-shadow-xl max-lg:tw-w-[320px]"
+            >
+                    <h3 class="">
+                        <span class="tw-text-5xl max-md:tw-text-3xl  tw-font-semibold">$2.99</span>
+                        <span class="tw-text-2xl max-md:tw-text-xl  tw-text-gray-600 dark:tw-text-gray-300">/mo</span>
+                    </h3>
+                    <p class="tw-mt-3 tw-text-center tw-text-gray-800 dark:tw-text-gray-200">
+                        Advanced features for beginner enthusiastic users.
+                    </p>
+                    <hr />
+                    <ul
+                        class="tw-mt-4 tw-flex tw-flex-col tw-gap-4  tw-text-base tw-text-gray-800 dark:tw-text-gray-100"
+                    >
+                    <li class="tw-flex tw-gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>3 Games / Month</span>    
+                    </li>
+                    <li class="tw-flex tw-gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Character Customization</span>    
+                    </li>
+                    <li class="tw-flex tw-gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Ready to Publish</span>    
+                    </li>
+
+                    <li class="tw-flex tw-gap-2 ">
+                        <i class="bi bi-check-circle-fill tw-text-gray-400 dark:tw-text-gray-500"></i>
+                        <span>Team Collaboration</span>    
+                    </li>
+
+                    <li class="tw-flex tw-gap-2 ">
+                        <i class="bi bi-check-circle-fill tw-text-gray-400 dark:tw-text-gray-500"></i>
+                        <span>Import Content</span>    
+                    </li>
+              
+                  
+                    </ul>
+                    <a
+                        href="#"
+                        class="btn tw-mt-8 !tw-w-full tw-transition-transform tw-duration-[0.3s] 
+                                hover:tw-scale-x-[1.02]  !tw-text-black !tw-bg-transparent 
+                                !tw-border-[1px] tw-border-black dark:tw-border-white dark:!tw-text-white"
+                    >
+                        Choose plan
+                    </a>
+                </div>
+
+                <div
+                    class="reveal-up tw-flex tw-w-[350px] tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-border-[1px]
+                            tw-border-outlineColor dark:tw-bg-[#080808] dark:tw-border-[#1f2123] tw-bg-white tw-p-8 tw-shadow-xl max-lg:tw-w-[320px]"
+                >
+                    <h3 class="">
+                        <span class="tw-text-5xl max-md:tw-text-3xl tw-font-semibold">$9.99</span>
+                        <span class="tw-text-2xl tw-text-gray-600 dark:tw-text-gray-300">/mo</span>
+                    </h3>
+                    <p class="tw-mt-3 tw-text-center tw-text-gray-800 dark:tw-text-gray-100">
+                        Unlimited potential for power users
+                    </p>
+                    <hr />
+                    <ul
+                        class="tw-mt-4 tw-flex tw-flex-col tw-gap-4 tw-text-base 
+                                tw-text-gray-800 dark:tw-text-gray-200"
+                    >
+                    <li class="tw-flex tw-gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>10 Games / Month</span>    
+                    </li>
+                    <li class="tw-flex tw-gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Character, Audio & Story Customization</span>    
+                    </li>
+                    <li class="tw-flex tw-gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Ready to Publish</span>    
+                    </li>
+
+                    <li class="tw-flex tw-gap-2 ">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Team Collaboration</span>    
+                    </li>
+
+                    <li class="tw-flex tw-gap-2 ">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Import Content</span>    
+                    </li>
+                  
+                    </ul>
+                    <a
+                        href="#"
+                        class="btn tw-mt-8 !tw-w-full tw-transition-transform tw-duration-[0.3s] 
+                                hover:tw-scale-x-[1.02] !tw-text-black !tw-bg-transparent 
+                                !tw-border-[1px] tw-border-black dark:tw-border-white dark:!tw-text-white"
+                    >
+                        Choose plan
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+        <section
+        class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-8"
+    >
+        <h2 class="tw-text-5xl tw-font-semibold tw-text-black dark:tw-text-white tw-mb-4 max-md:tw-text-3xl tw-leading-normal tw-text-center">
+            Trusted by brands you love
+        </h2>
+    
+        <div class="reveal-up carousel-container">
+            <div
+                class="carousel lg:w-place-content-center tw-mt-10 tw-flex tw-w-full tw-gap-5 max-md:tw-gap-2"
+            >
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img
+                        src="./assets/images/brand-logos/google.svg"
+                        alt="Google"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset=""
+                    />
+                </div>
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img
+                        src="./assets/images/brand-logos/microsoft.svg"
+                        alt="Microsoft"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset=""
+                    />
+                </div>
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img
+                        src="./assets/images/brand-logos/adobe.svg"
+                        alt="Adobe"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset=""
+                    />
+                </div>
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img
+                        src="./assets/images/brand-logos/airbnb.svg"
+                        alt="Airbnb"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset=""
+                    />
+                </div>
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img
+                        src="./assets/images/brand-logos/stripe.svg"
+                        alt="Stripe"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset=""
+                    />
+                </div>
+                <div class="carousel-img tw-h-[30px] tw-w-[150px]">
+                    <img
+                        src="./assets/images/brand-logos/reddit.svg"
+                        alt="Reddit"
+                        class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+                        srcset=""
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+        
+        <section
+            class="tw-relative tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]"
+        >   
+
+
+            <h3
+                class="tw-text-5xl tw-font-semibold tw-text-black dark:tw-text-white tw-mb-4 max-md:tw-text-3xl tw-leading-normal tw-text-center"
+            >
+                FAQ
+            </h3>
+            <div
+                class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4"
+            >
+                <div
+                    class="faq tw-w-full"
+                >
+                    <h4
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>What is Playdium?</span>
+                        <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform 
+                                    tw-ml-auto tw-font-semibold"></i>
+                    </h4>
+                    <div class="content max-lg:tw-text-sm">
+                        Playdium is an AI-powered platform that turns your ideas into fully playable games with no coding required, making game creation accessible to everyone.
+                    </div>
+                </div>
+                <hr>
+                <div
+                    class="faq tw-w-full"
+                >
+                    <h4
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>Why to use Playdium?</span>
+                        <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform 
+                                    tw-ml-auto tw-font-semibold"></i>
+                    </h4>
+                    <div class="content max-lg:tw-text-sm">
+                        Create games instantly with AI, collaborate in real-time, import assets effortlessly, and reach global audiences with multilingual support.
+                    </div>
+                </div>
+                <hr>
+                <div
+                    class="faq tw-w-full"
+                >
+                    <h4
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>When will Playdium launch?</span>
+                        <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform 
+                                    tw-ml-auto tw-font-semibold"></i>
+                    </h4>
+                    <div class="content max-lg:tw-text-sm">
+                        Playdium launches soon! Join our waitlist for exclusive early access and priority updates.
+                    </div>
+                </div>
+                <hr>
+
+                <div
+                    class="faq tw-w-full"
+                >
+                    <h4
+                        class="faq-accordion tw-flex tw-w-full tw-select-none tw-text-xl max-md:tw-text-lg"
+                    >
+                        <span>Is Playdium Free to use?</span>
+                        <i class="bi bi-plus tw-text-xl tw-origin-center tw-duration-300 tw-transition-transform 
+                                    tw-ml-auto tw-font-semibold"></i>
+                    </h4>
+                    <div class="content max-lg:tw-text-sm">
+                        Yes! Start with our free tier featuring essential tools, or upgrade to premium plans for advanced features and customization.
+                    </div>
+                </div>
+                <hr>
+                
+            </div>
+            <div class="purple-bg-grad max-md:tw-hidden reveal-up tw-absolute tw-bottom-14 tw-right-[20%] 
+                                 tw-h-[150px] tw-w-[150px] tw-rounded-full"
+                ></div>
+           
+        </section>
+
+   
+
+        <section
+            class="tw-relative tw-flex tw-w-full tw-mt-10 tw-flex-col tw-place-content-center tw-place-items-center tw-gap-4 tw-py-16 tw-px-[5%] max-lg:tw-py-12 max-md:tw-py-8 max-md:tw-px-4 tw-overflow-hidden"
+            id="join"
+            style="padding-bottom: 20px;"
+        >
+            <div class="purple-bg-grad tw-absolute tw-left-1/2 tw--translate-x-1/2 tw-top-[10%] tw-h-[200px] tw-w-[200px] tw-rounded-full"></div>
+            
+            <div class="tw-text-center tw-max-w-2xl tw-mx-auto tw-relative tw-z-10 tw-px-4">
+                <h2 class="tw-text-5xl tw-font-semibold tw-text-black dark:tw-text-white tw-mb-4 max-lg:tw-text-4xl max-md:tw-text-3xl max-sm:tw-text-2xl tw-leading-normal">
+                    Join our waitlist
+                </h2>
+                <p class="tw-text-lg tw-text-gray-700 dark:tw-text-gray-300 tw-mb-8 max-lg:tw-mb-6 max-md:tw-text-base max-sm:tw-text-sm tw-leading-relaxed tw-px-4">
+                    Get early access to Playdium and be the first to experience the future of AI-powered creativity.
+                </p>
+            </div>
+
+            <div class="tw-w-full tw-max-w-[900px] tw-mx-auto tw-relative tw-z-10 tw-mb-16 tw-mt-6 tw-px-4 max-lg:tw-mb-12 max-md:tw-mb-8 max-md:tw-mt-4">
+                <div class="tw-bg-white dark:tw-bg-[#17181B] tw-rounded-xl tw-border-2 tw-border-gray-300 dark:tw-border-gray-600 tw-p-8 max-lg:tw-p-6 max-md:tw-p-4 tw-shadow-xl dark:tw-shadow-gray-800 tw-backdrop-blur-lg tw-mb-8">
+                    <form id="waitlist-form" class="tw-space-y-6 max-lg:tw-space-y-5">
+
+                        <div>
+                            <label for="waitlist-email" class="tw-block tw-text-base tw-font-bold tw-text-black dark:tw-text-white tw-mb-3 max-md:tw-text-sm">
+                                Email Address
+                            </label>
+                            <input
+                                type="email"
+                                id="waitlist-email"
+                                name="email"
+                                class="input tw-w-full tw-px-4 tw-py-3 max-md:tw-px-3 max-md:tw-py-2 tw-text-black dark:tw-text-white tw-placeholder-gray-500 dark:tw-placeholder-gray-400 tw-bg-transparent tw-border-gray-300 dark:tw-border-[#595858] tw-rounded-lg tw-transition-all tw-duration-300 focus:tw-border-[#6366f1] focus:tw-ring-2 focus:tw-ring-[#6366f1]/20 tw-text-base max-md:tw-text-sm"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            />
+                        </div>
+
+                        <div>
+                            <label for="waitlist-suggestion" class="tw-block tw-text-base tw-font-bold tw-text-black dark:tw-text-white tw-mb-3 max-md:tw-text-sm">
+                                Share your ideas (optional)
+                            </label>
+                            <textarea
+                                id="waitlist-suggestion"
+                                name="suggestion"
+                                rows="4"
+                                class="input tw-w-full tw-px-4 tw-py-3 max-md:tw-px-3 max-md:tw-py-2 tw-text-black dark:tw-text-white tw-placeholder-gray-500 dark:tw-placeholder-gray-400 tw-resize-none tw-bg-transparent tw-border-gray-300 dark:tw-border-[#595858] tw-rounded-lg tw-transition-all tw-duration-300 focus:tw-border-[#6366f1] focus:tw-ring-2 focus:tw-ring-[#6366f1]/20 tw-text-base max-md:tw-text-sm"
+                                placeholder="Tell us what features you'd love to see in Playdium..."
+                                maxlength="500"
+                            ></textarea>
+                        </div>
+
+                        <button
+                            type="submit"
+                            id="waitlist-submit"
+                            class="btn tw-w-full tw-flex tw-gap-3 tw-justify-center tw-items-center tw-transition-all tw-duration-300 hover:tw-scale-[1.02] tw-bg-black dark:tw-bg-white tw-text-white dark:tw-text-black tw-py-4 max-md:tw-py-3 tw-rounded-lg tw-font-medium tw-shadow-lg hover:tw-shadow-xl tw-group tw-text-base max-md:tw-text-sm"
+                        >
+                            <span id="submit-text">Join the Waitlist</span>
+                            <i class="bi bi-arrow-right tw-transition-transform tw-duration-300 group-hover:tw-translate-x-1"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div id="custom-error-popup" class="tw-absolute tw-top-full tw-left-1/2 tw-transform tw--translate-x-1/2 tw-mt-4 tw-z-50 tw-hidden tw-w-full tw-max-w-[calc(100%-2rem)]">
+                    <div class="tw-bg-white dark:tw-bg-[#17181B] tw-border tw-border-gray-200 dark:tw-border-[#36393c] 
+                                tw-rounded-xl tw-p-4 tw-w-full tw-max-w-sm tw-min-w-[280px] tw-relative tw-shadow-xl dark:tw-shadow-gray-800 tw-backdrop-blur-lg">
+                        <div class="tw-flex tw-items-start tw-gap-3">
+                            <div class="tw-flex-shrink-0 tw-w-6 tw-h-6 tw-bg-red-500 tw-rounded-full tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-exclamation-lg tw-text-white tw-text-sm"></i>
+                            </div>
+                            <div class="tw-flex-1">
+                                <p id="error-message-text" class="tw-text-sm tw-text-black dark:tw-text-white tw-leading-relaxed"></p>
+                            </div>
+                        </div>
+                        <div class="tw-absolute tw--top-2 tw-left-1/2 tw-transform tw--translate-x-1/2 tw-w-0 tw-h-0 tw-border-l-4 tw-border-r-4 tw-border-b-4 
+                                    tw-border-l-transparent tw-border-r-transparent tw-border-b-white dark:tw-border-b-[#17181B]"></div>
+                    </div>
+                </div>
+                
+                <div id="waitlist-message" class="tw-mt-6 tw-text-center tw-hidden tw-mx-auto tw-max-w-md tw-opacity-0 tw-transform tw-translate-y-2 tw-transition-all tw-duration-300 tw-bg-white dark:tw-bg-[#17181B] tw-border tw-border-gray-200 dark:tw-border-[#36393c] tw-rounded-xl tw-p-4 tw-shadow-lg dark:tw-shadow-gray-800"></div>
+            </div>
+            
+            <div style="height: 100px; background: transparent;"></div>
+        </section>
+
+        <footer
+            class="tw-mt-auto tw-flex tw-flex-col tw-w-full tw-gap-4 tw-text-sm tw-pt-[5%] tw-pb-10 tw-px-[10%] 
+                    tw-text-black dark:tw-text-white max-md:tw-flex-col"
+        >
+            <div class="tw-flex max-md:tw-flex-col max-md:tw-gap-6 tw-gap-3 tw-w-full tw-place-content-around">
+                <div
+                    class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full"
+                >   
+                    <a href="#" class="tw-w-full tw-place-items-center tw-flex tw-flex-col tw-gap-6">
+                        <img
+                            src="./assets/logo/logo.png"
+                            alt="logo"
+                            srcset=""
+                            class="tw-max-w-[120px] dark:tw-invert"
+                        />
+                        <div class="tw-max-w-[120px] tw-text-center tw-text-3xl tw-h-fit">
+                            PLAYDIUM
+                        </div>
+                    </a>
+                    <div class="tw-flex tw-gap-4 tw-text-lg">
+                        <a
+                            href="#"
+                            aria-label="Github"
+                        >
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a
+                            href="#"
+                            aria-label="Twitter"
+                        >
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                      
+                        <a
+                            href="#"
+                            aria-label="Linkedin"
+                        >
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="tw-flex max-md:tw-flex-col tw-flex-wrap tw-gap-6 tw-h-full tw-w-full tw-justify-around">
+                    <div class="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
+                        <h2 class="tw-text-xl">Resources</h2>
+                        <div class="tw-flex tw-flex-col tw-gap-3">
+                            <a href="#" class="footer-link">Getting started</a>
+                            <a href="#" class="footer-link">API Docs</a>
+                            <a href="#" class="footer-link">API Endpoints</a>
+                            <a href="#" class="footer-link">Health status</a>
+                            <a href="#" class="footer-link">Pricing</a>
+                        </div>
+                    </div>
+
+
+                    <div class="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
+                        <h2 class="tw-text-xl">Company</h2>
+                        <div class="tw-flex tw-flex-col tw-gap-3">
+                            <a href="#" class="footer-link">Support channels</a>
+                            <a href="#" class="footer-link">Systems</a>
+                            <a href="#" class="footer-link">Blog</a>
+                            <a href="#" class="footer-link">Twitter</a>
+                            <a href="#" class="footer-link">Github</a>
+                        </div>
+                    </div>
+
+                    <div class="tw-flex tw-h-full tw-w-[200px] tw-flex-col tw-gap-4">
+                        <h2 class="tw-text-xl">Legal</h2>
+                        <div class="tw-flex tw-flex-col tw-gap-3">
+                            <a href="#" class="footer-link">Terms of service</a>
+                            <a href="#" class="footer-link">Privacy Policy</a>
+                            <a href="#" class="footer-link">DCMA - Content Takedown</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="tw-mt-8">
+            <div class="tw-mt-2 tw-flex tw-gap-2 tw-flex-col tw-text-gray-700 dark:tw-text-gray-300 tw-place-items-center 
+                    tw-text-[12px] tw-w-full tw-text-center tw-place-content-around">
+                <span>Copyright &#169; 2025</span>
+                <span>All trademarks and copyrights belong to Playdium games pvt ltd.</span>
+            </div>
+
+        </footer>
+    </body>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+            integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/framer-motion@10.12.0/dist/framer-motion.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./scripts/components.js"></script>
+    <script src="./index.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("vlA4ZV1UDxgGlyReg");
+        })();
+    </script>
+    
+    <script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.1/dist/dotlottie-wc.js"
+  type="module"
+></script>
+    <script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.1/dist/dotlottie-wc.js"
+  type="module"
+></script>
+
+<script type="text/babel">
+    const { useState, useEffect } = React;
+    const { motion } = Motion;
+
+    function TypewriterText({ texts, speed = 100, deleteSpeed = 50, pauseTime = 2000 }) {
+        const [currentTextIndex, setCurrentTextIndex] = useState(0);
+        const [currentText, setCurrentText] = useState('');
+        const [isDeleting, setIsDeleting] = useState(false);
+
+        useEffect(() => {
+            const current = texts[currentTextIndex];
+            
+            if (!isDeleting) {
+                if (currentText.length < current.length) {
+                    const timer = setTimeout(() => {
+                        setCurrentText(current.slice(0, currentText.length + 1));
+                    }, speed);
+                    return () => clearTimeout(timer);
+                } else {
+                    const timer = setTimeout(() => {
+                        setIsDeleting(true);
+                    }, pauseTime);
+                    return () => clearTimeout(timer);
+                }
+            } else {
+                if (currentText.length > 0) {
+                    const timer = setTimeout(() => {
+                        setCurrentText(current.slice(0, currentText.length - 1));
+                    }, deleteSpeed);
+                    return () => clearTimeout(timer);
+                } else {
+                    setIsDeleting(false);
+                    setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+                }
+            }
+        }, [currentTextIndex, currentText, isDeleting, texts, speed, deleteSpeed, pauseTime]);
+
+        return React.createElement('span', { className: 'inline' },
+            currentText,
+            React.createElement('span', { className: 'animate-pulse' }, '|')
+        );
+    }
+
+    function BlurText({ children, delay = 2000, duration = 1 }) {
+        const [isVisible, setIsVisible] = useState(false);
+
+        useEffect(() => {
+            const timer = setTimeout(() => {
+                setIsVisible(true);
+            }, delay);
+
+            return () => clearTimeout(timer);
+        }, [delay]);
+
+        return React.createElement(motion.span, {
+            initial: { filter: 'blur(10px)', opacity: 0.3 },
+            animate: {
+                filter: isVisible ? 'blur(0px)' : 'blur(10px)',
+                opacity: isVisible ? 1 : 0.3
+            },
+            transition: {
+                duration: duration,
+                ease: 'easeOut'
+            },
+            className: 'tw-font-light tw-font-serif tw-tracking-wide'
+        }, children);
+    }
+
+    function HeroTagline() {
+        const texts = ['Turn concepts', 'Transform ideas', 'Create concepts', 'Build visions'];
+        
+        return React.createElement('h2', {
+            className: 'reveal-up tw-text-center tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[90px] max-lg:tw-text-4xl max-md:tw-leading-snug'
+        },
+            React.createElement('span', { className: '' },
+                React.createElement(TypewriterText, { 
+                    texts: texts, 
+                    speed: 100, 
+                    deleteSpeed: 50, 
+                    pauseTime: 2000 
+                })
+            ),
+            React.createElement('br'),
+            React.createElement(BlurText, { delay: 800, duration: 0.8 }, 'into quests')
+        );
+    }
+
+    function initHeroTagline() {
+        const heroElement = document.getElementById('hero-tagline');
+        if (heroElement) {
+            const root = ReactDOM.createRoot(heroElement);
+            root.render(React.createElement(HeroTagline));
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHeroTagline);
+    } else {
+        initHeroTagline();
+    }
+</script>
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</html>
