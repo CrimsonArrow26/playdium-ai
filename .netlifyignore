@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Development files
+src/
+vite.config.js
+setup-react.md
+
+# Build tools
+package-lock.json
+yarn.lock
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env*
+
+# Git files
+.git/
+.gitignore
+
+# Documentation
+README.md
+*.md
