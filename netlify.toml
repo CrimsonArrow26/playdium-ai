@@ -1,6 +1,6 @@
 [build]
-  # Build command
-  command = "npm run build:tailwind"
+  # No build command needed - static site
+  command = ""
   
   # Directory to publish
   publish = "."
