@@ -184,124 +184,114 @@
         </header>
 
         <section
-            class="hero-section tw-relative tw-mt-20 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-mt-[100px]"
-            id="hero-section"
+        class="hero-section tw-relative tw-mt-20 tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-mt-[100px]"
+        id="hero-section"
+    >
+    
+        <div class="tw-fixed tw-bg-[#000000af] dark:tw-bg-[#80808085] tw-top-0 tw-left-1/2 tw--translate-x-1/2 tw-z-20 tw-transition-opacity
+            tw-duration-300 tw-scale-0 tw-opacity-0 tw-p-2
+            tw-w-full tw-h-full tw-flex tw-place-content-center tw-place-items-center" id="video-container-bg">
+    
+            <div class="tw-max-w-[80vw] max-lg:tw-max-w-full max-lg:tw-w-full tw-scale-0 tw-transition-transform tw-duration-500 tw-p-6 tw-rounded-xl  max-lg:tw-px-2 tw-w-full tw-gap-2 tw-shadow-md 
+                tw-h-[90vh] max-lg:tw-h-auto max-lg:tw-min-h-[400px] tw-bg-white dark:tw-bg-[#16171A] tw-max-h-full"
+                id="video-container">
+                <div class="tw-w-full tw-flex">
+                    <button type="button" onclick="closeVideo()" class="tw-ml-auto tw-text-xl" title="close">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </button>
+                </div>
+                <div class="tw-flex tw-w-full  tw-rounded-xl tw-px-[5%] max-md:tw-px-2 tw-min-h-[300px] tw-max-h-[90%] tw-h-full">
+    
+                    <div class="tw-relative tw-bg-black tw-min-w-full tw-min-h-full tw-overflow-clip tw-rounded-md">
+                        <video 
+                            src="assets/video.mp4" 
+                            autoplay 
+                            muted 
+                            loop 
+                            playsinline
+                            preload="auto"
+                            class="tw-w-full tw-h-full tw-rounded-xl tw-object-cover"
+                            style="object-fit: cover;"
+                        >
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    
+        <div     
+            class="hero-bg-gradient tw-relative tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4"
         >
-
-            <div class="tw-fixed tw-bg-[#000000af] dark:tw-bg-[#80808085] tw-top-0 tw-left-1/2 tw--translate-x-1/2 tw-z-20 tw-transition-opacity
-                tw-duration-300 tw-scale-0 tw-opacity-0 tw-p-2
-                tw-w-full tw-h-full tw-flex tw-place-content-center tw-place-items-center" id="video-container-bg">
-
-                <div class="tw-max-w-[80vw] max-lg:tw-max-w-full max-lg:tw-w-full tw-scale-0 tw-transition-transform tw-duration-500 tw-p-6 tw-rounded-xl  max-lg:tw-px-2 tw-w-full tw-gap-2 tw-shadow-md 
-                            tw-h-[90vh] max-lg:tw-h-auto max-lg:tw-min-h-[400px] tw-bg-white dark:tw-bg-[#16171A] tw-max-h-full
-                            " id="video-container">
-                    <div class="tw-w-full tw-flex">
-                        <button type="button" onclick="closeVideo()" class="tw-ml-auto tw-text-xl" title="close">
-                            <i class="bi bi-x-circle-fill"></i>
-                        </button>
-                    </div>
-                    <div class="tw-flex tw-w-full  tw-rounded-xl tw-px-[5%] max-md:tw-px-2 tw-min-h-[300px] tw-max-h-[90%] tw-h-full">
-
-                        <div class="tw-relative tw-bg-black tw-min-w-full tw-min-h-full tw-overflow-clip tw-rounded-md">
-                            <video 
-                                src="assets/video.mp4" 
-                                autoplay 
-                                muted 
-                                loop 
-                                playsinline
-                                preload="auto"
-                                class="tw-w-full tw-h-full tw-rounded-xl tw-object-cover"
-                                style="object-fit: cover;"
-                            >
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-        
-                    </div>
-                </div>  
-            </div>
-
-            <div    
-                class="hero-bg-gradient tw-relative tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-p-4"
+            <div class="purple-bg-grad  reveal-up tw-absolute tw-left-1/2 tw--translate-1/2 tw-top-[10%] tw-h-[120px] tw-w-[120px]"></div> 
+    
+            <div
+                class="tw-flex tw-flex-col tw-min-h-[60vh] tw-place-content-center tw-items-center"
             >
-
-                <div class="purple-bg-grad  reveal-up tw-absolute tw-left-1/2 tw--translate-1/2 tw-top-[10%] tw-h-[120px] tw-w-[120px]"
-                ></div> 
-
+                <div id="hero-tagline"></div>
                 <div
-                    class="tw-flex tw-flex-col tw-min-h-[60vh] tw-place-content-center tw-items-center"
+                    class="reveal-up tw-mt-8 tw-max-w-[450px] tw-text-lg max-lg:tw-text-base tw-p-2 tw-text-center
+                     tw-text-gray-800 dark:tw-text-white max-lg:tw-max-w-full"
                 >
-                    <div id="hero-tagline"></div>
-                    <div
-                        class="reveal-up tw-mt-8 tw-max-w-[450px] tw-text-lg max-lg:tw-text-base tw-p-2 tw-text-center
-                         tw-text-gray-800 dark:tw-text-white max-lg:tw-max-w-full"
-                    >
-                        Discover a platform where artificial intelligence turns your concepts into fully functional games, making development simple, fast, and fun..
-                    </div>
-
-                    <div
-                        class="reveal-up tw-mt-10 max-md:tw-flex-col tw-flex tw-place-items-center tw-gap-4"
-                    >
-
-                        <button onclick="openVideo()"
-                            class="btn !tw-w-[170px] max-lg:!tw-w-[160px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 tw-group !tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors 
-                                        tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white"
-                        >
-                            
-                            <div class="tw-relative tw-flex tw-place-items-center tw-place-content-center tw-w-6 tw-h-6">
-                                <div class="tw-absolute tw-inset-0 tw-top-0 tw-left-0 tw-scale-0 tw-duration-300 group-hover:tw-scale-100 tw-border-2
-                                             tw-border-gray-600 dark:tw-border-gray-200 tw-rounded-full tw-w-full tw-h-full"></div>
-                                <span class="bi bi-play-circle-fill"></span>
-                            </div>
-                            <span>Watch video</span>
-                        </button>
-
-                        <a
-                            class="btn tw-group max-lg:!tw-w-[160px] tw-flex tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
-                            href="#join"
-                        >
-                            <span>Join Us</span>
-                            <i class="bi bi-arrow-right group-hover:tw-translate-x-1 tw-duration-300"></i>
-                        </a>
-                        
-                    </div>
+                    Discover a platform where artificial intelligence turns your concepts into fully functional games, making development simple, fast, and fun..
                 </div>
-                
+    
                 <div
-                    class="reveal-up  tw-relative tw-mt-8 tw-flex tw-w-full tw-place-content-center tw-place-items-center"
-                    id="dashboard-container"
+                    class="reveal-up tw-mt-10 max-md:tw-flex-col tw-flex tw-place-items-center tw-gap-4"
                 >
-                    <div class="purple-bg-grad  reveal-up tw-absolute tw-left-1/2 tw--translate-x-1/2 tw-top-[5%] tw-h-[200px] tw-w-[200px]"
-                    ></div>    
-
-                    <div
-                        class="tw-relative tw-max-w-[80%] tw-bg-white dark:tw-bg-black tw-border-[1px] dark:tw-border-[#36393c] lg:tw-w-[1024px]
-                                lg:tw-h-[650px] tw-flex tw-shadow-xl max-lg:tw-h-[450px] max-lg:tw-w-full tw-overflow-hidden
-                                tw-min-w-[320px] md:tw-w-full tw-min-h-[450px] tw-rounded-xl tw-bg-transparent max-md:tw-max-w-full"
-                        id="dashboard"
-                        style="translate: none; rotate: none; scale: none; transform: perspective(1201.71px);"
-                    >  
-
-                        <div class="tw-max-w-[80%] reveal-up tw-absolute tw-left-1/2 tw--translate-x-1/2 tw-top-[0%] lg:tw-max-w-[1000px] tw-h-full tw-w-full"
-                        style="translate: none; rotate: none; scale: none; transform: translate(-50%, 0%) translate(0px, 0px); opacity: 1;"></div> 
-                        
-
-                            
-
-                                <video 
-                                    src="assets/video.mp4" 
-                                    autoplay 
-                                    muted 
-                                    loop 
-                                    class="tw-w-full tw-h-full tw-rounded-xl"
-                                    data-dm-button-id="download-master-button-167717"
-                                >
-                                    Your browser does not support the video tag.
-                                </video>
-
+                    <button onclick="openVideo()"
+                        class="btn !tw-w-[170px] max-lg:!tw-w-[160px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-flex tw-gap-2 tw-group !tw-bg-transparent !tw-text-black dark:!tw-text-white tw-transition-colors 
+                                    tw-duration-[0.3s] tw-border-[1px] tw-border-black dark:tw-border-white"
+                    >
+                        <div class="tw-relative tw-flex tw-place-items-center tw-place-content-center tw-w-6 tw-h-6">
+                            <div class="tw-absolute tw-inset-0 tw-top-0 tw-left-0 tw-scale-0 tw-duration-300 group-hover:tw-scale-100 tw-border-2
+                                     tw-border-gray-600 dark:tw-border-gray-200 tw-rounded-full tw-w-full tw-h-full"></div>
+                            <span class="bi bi-play-circle-fill"></span>
+                        </div>
+                        <span>Watch video</span>
+                    </button>
+                    <a
+                        class="btn tw-group max-lg:!tw-w-[160px] tw-flex tw-gap-2 tw-shadow-lg !tw-w-[170px] !tw-rounded-xl !tw-py-4 max-lg:!tw-py-2 tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                        href="#join"
+                    >
+                        <span>Join Us</span>
+                        <i class="bi bi-arrow-right group-hover:tw-translate-x-1 tw-duration-300"></i>
+                    </a>
                 </div>
             </div>
-        </section>
+            
+            <!-- Replacement dashboard container -->
+            <div
+                class="reveal-up  tw-relative tw-mt-8 tw-flex tw-w-full tw-place-content-center tw-place-items-center"
+                id="dashboard-container"
+            >
+                <div class="purple-bg-grad  reveal-up tw-absolute tw-left-1/2 tw--translate-x-1/2 tw-top-[5%] tw-h-[200px] tw-w-[200px]"></div>
+                <div
+                    class="tw-relative tw-max-w-[80%] tw-bg-white dark:tw-bg-black tw-border-[1px] dark:tw-border-[#36393c] lg:tw-w-[1024px]
+                        lg:tw-h-[650px] tw-flex tw-shadow-xl max-lg:tw-h-[450px] max-lg:tw-w-full tw-overflow-hidden
+                        tw-min-w-[320px] md:tw-w-full tw-min-h-[450px] tw-rounded-xl tw-bg-transparent max-md:tw-max-w-full"
+                    id="dashboard"
+                    style="translate: none; rotate: none; scale: none; transform: perspective(1201.71px);"
+                >
+                    <div class="tw-max-w-[80%] reveal-up tw-absolute tw-left-1/2 tw--translate-x-1/2 tw-top-[0%] lg:tw-max-w-[1000px] tw-h-full tw-w-full"
+                        style="translate: none; rotate: none; scale: none; transform: translate(-50%, 0%) translate(0px, 0px); opacity: 1;">
+                    </div>
+                    <video 
+                        src="assets/video.mp4" 
+                        autoplay 
+                        muted 
+                        loop 
+                        class="tw-w-full tw-h-full tw-rounded-xl"
+                        data-dm-button-id="download-master-button-167717"
+                    >
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <!-- End replacement -->
+        </div>
+    </section>
+    
 
 
             
